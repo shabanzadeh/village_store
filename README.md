@@ -14,7 +14,7 @@ This project serves as a culmination of the React course at Readi School, demons
 
 `HTML/CSS`
 
-`Tailwind (optional, if used for styling)`
+`Tailwind css`
 
 ## Getting Started
 
