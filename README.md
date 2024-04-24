@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# Village Store - Final React Course Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Village Store, the final project for the React course at Readi School. This project showcases an e-commerce website built using React, featuring various product categories and a responsive design.
 
-Currently, two official plugins are available:
+# Project Description
+Village Store is a responsive e-commerce website that includes components for different product categories such as kitchen items, women's and men's clothing, children's clothing, sanitary and cosmetic products, and plastic goods. Additionally, the website highlights the top-selling product of each month.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project serves as a culmination of the React course at Readi School, demonstrating proficiency in building dynamic web applications with React.
 
-## Expanding the ESLint configuration
+# Technologies Used
+`React`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+`TypeScript`
 
-- Configure the top-level `parserOptions` property like this:
+`HTML/CSS`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+`Tailwind (optional, if used for styling)`
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Getting Started
+1. `npm run dev`
+
