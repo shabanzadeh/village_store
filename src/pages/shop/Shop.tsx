@@ -2,15 +2,24 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons/faShoppingCart";
 
+
 const Shop = ()=>{
     return(
-        <ul>
-            <li>
+        <div>
+            
+                <div className="m-4 rounded-full bg-gray-100 w-20 h-20 flex items-center justify-center">
                 <Link to="/cart">
                     <FontAwesomeIcon icon={faShoppingCart} />
-                </Link>
-            </li>
-        </ul>
+                </Link >
+                </div >
+                <div className="m-4 rounded-full bg-gray-100 w-20 h-20 flex items-center justify-center">
+                    <Link to="/wohmenDress">
+
+                    </Link>
+                </div>
+                </div>
+            
+        
     )
 }
 
