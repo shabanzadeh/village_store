@@ -3,6 +3,7 @@ import Shop from "./pages/shop/Shop.js";
 import Cart from "./pages/cart/Cart.js";
 import Nav from "./components/Nav.js"
 
+
 function App() {
   return (
     <>
@@ -19,7 +20,7 @@ function App() {
         }></Route>
       </Routes>
     </Router>
-      <div className="text-4xl text-blue-500">Hello world!</div>
+   
     </>
   );
 }

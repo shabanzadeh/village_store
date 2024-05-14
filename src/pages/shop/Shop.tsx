@@ -4,7 +4,8 @@ import kidImage from "../../assets/kid.jpeg"
 import womenImage from "../../assets/wohmen.jpeg"
 import stationeryImage from "../../assets/stationery.jpeg"
 import toysImage from "../../assets/toys.jpg"
-
+import kitchenImage from "../../assets/kitchen.jpg"
+import cosmeticsImage from "../../assets/cosmetic.jpg"
 
 
 const Shop = () => {
@@ -13,7 +14,9 @@ const Shop = () => {
         { name: "Kids", image: kidImage, link: "/kidDress" },
         { name: "Women", image: womenImage, link: "/womenDress" },
         { name: "Stationery", image: stationeryImage, link: "/stationery" },
-        { name: "Toys", image: toysImage, link: "/toys" }
+        { name: "Toys", image: toysImage, link: "/toys" },
+        {name: "Kitchen", image: kitchenImage, link: "/kitchen"},
+        {name: "Cosmetics",image: cosmeticsImage, link: "/cosmetic"}
     ];
 
     return (
