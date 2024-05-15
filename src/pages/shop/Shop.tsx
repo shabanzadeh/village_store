@@ -12,7 +12,7 @@ const Shop = () => {
     const categories = [
         { name: "Men", image: menImage, link: "/menDress" },
         { name: "Kids", image: kidImage, link: "/kidDress" },
-        { name: "Women", image: womenImage, link: "/womenDress" },
+        { name: "Women", image: womenImage, link: "/wohmenDress" },
         { name: "Stationery", image: stationeryImage, link: "/stationery" },
         { name: "Toys", image: toysImage, link: "/toys" },
         {name: "Kitchen", image: kitchenImage, link: "/kitchen"},
