@@ -4,7 +4,8 @@ import Cart from "./pages/cart/Cart.js";
 import Nav from "./components/Nav.js"
 import WohmenDress from './pages/wohmenDress/wohmenDress.js'
 import KidDress from "./pages/kidDress/kidDress.js";
-
+import Error from "./components/Error.js"
+import Login from "./login/login.js";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <Router>
      <Nav />
       <Routes>
-        <Route path="/" element={<Shop />}></Route>
+        <Route path="/" element={<Shop categoryName={""} categoryImage={""} categoryLink={""} />}></Route>
         <Route path= "/wohmenDress" element={< WohmenDress />} ></Route>
         <Route path = "/menDress"></Route>
         <Route path="/childDress" element = {< KidDress />}></Route>
@@ -21,6 +22,8 @@ function App() {
         <Route path ="/stantionery"></Route>
         <Route path="/cart" element={ < Cart />
         }></Route>
+        <Route path="/profile/:username?"></Route>
+        <Route path="/login" element={<Login />}></Route>
         <Route  path="*" element ={< Error/>}></Route>
       </Routes>
     </Router>
