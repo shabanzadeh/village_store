@@ -1,4 +1,12 @@
-const ProductW = (props) => {
+type ProductWProps = {
+  data: {
+    productImage: string;
+    productName: string;
+    price: number;
+  };
+};
+
+const ProductW = (props: ProductWProps) => {
   const { productImage, productName, price } = props.data;
 
   return (

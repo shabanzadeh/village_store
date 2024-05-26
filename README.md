@@ -16,6 +16,8 @@ This project serves as a culmination of the React course at Readi School, demons
 
 `Tailwind (optional, if used for styling)`
 
+`Firebase`
+
 # Getting Started
 1. `npm run dev`
 
