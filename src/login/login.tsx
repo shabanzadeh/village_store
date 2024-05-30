@@ -10,7 +10,7 @@ const Login = () => {
   const navitage = useNavigate();
   navitage("/")
 
-  const handleLogin = (e) => {
+  const handleLogin = (e:any) => {
     e.preventDefault();
     setError(false); 
 

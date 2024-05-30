@@ -7,7 +7,8 @@ import { count } from 'firebase/firestore';
 
 const ProductW = (props: ItemProps) => {
   const { id, productImage, productName, price } = props.data;
-  const {cartItems, addToCart, removeFromCart } = useContext<ShopContextProps>(ShopContext);
+  const {cartItems, addToCart, removeFromCart } = useContext<ShopContextProps | null>(ShopContext);
+  const isThere = cartItems.some((item: number)=>item.id ===id)
   
 
   return (
@@ -26,7 +27,7 @@ const ProductW = (props: ItemProps) => {
         </button>
         <span>{cartItems?.filter((row: ItemProps)=>row.id===id)[0]?.count} </span> 
         
-        <button className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded ml-1 h-9 w-7" onClick={() => removeFromCart(id)}> - </button>
+       {isThere && <button className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded ml-1 h-9 w-7" onClick={() => removeFromCart(id)}> - </button>}
         </div>
       </div>
     </div>
