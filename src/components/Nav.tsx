@@ -14,7 +14,7 @@ const Nav = () => {
         <div className="flex items-center justify-between w-full">
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
             <Link to="/" className="text-gray-700">Home</Link>
-            <Link to="/about" className="text-gray-700">About</Link>
+            <Link to="/cart" className="text-gray-700">Cart</Link>
             <Link to="/login" className="text-gray-700">Login</Link>
           </div>
           <div className="text-center flex-grow">
@@ -41,7 +41,7 @@ const Nav = () => {
         <div className={`w-full block lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
           <div className="flex flex-col items-center">
             <Link to="/" className="block mt-4 text-gray-700">Home</Link>
-            <Link to="/about" className="block mt-4 text-gray-700">About</Link>
+            <Link to="/cart" className="block mt-4 text-gray-700">Cart</Link>
             <Link to="/login" className="block mt-4 text-gray-700">Login</Link>
           </div>
         </div>

@@ -1,6 +1,7 @@
 export type ItemProps = {
     id: number
     count: number
+    itemId: number
     datta:{
     id: number,
     productName: string,
@@ -21,4 +22,8 @@ export type ShopContextProviderProps = {
   
    
 }
-
+export type ShopPropsInterface = {
+    categoryName: string;
+    categoryImage: string;
+    categoryLink: string;
+  };

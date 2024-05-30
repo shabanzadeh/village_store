@@ -6,12 +6,10 @@ import stationeryImage from "../../assets/stationery.jpeg";
 import toysImage from "../../assets/toys.jpg";
 import kitchenImage from "../../assets/kitchen.jpg";
 import cosmeticsImage from "../../assets/cosmetic.jpg";
+import { ShopPropsInterface } from "../../types/types";
 
-type ShopPropsInterface = {
-  categoryName: string;
-  categoryImage: string;
-  categoryLink: string;
-};
+
+
 const Shop = ({}: ShopPropsInterface) => {
   const categoriesList = [
     { categoryName: "Men", categoryImage: menImage, categoryLink: "/menDress" },
