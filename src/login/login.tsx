@@ -1,21 +1,24 @@
 import { useState } from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../api/firebase";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const navitage = useNavigate();
+  navitage("/")
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setError(false); // Reset the error state before trying to sign in
+    setError(false); 
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log("User logged in: ", user);
-        // Handle successful login here
+        
       })
       .catch((error) => {
         setError(true);

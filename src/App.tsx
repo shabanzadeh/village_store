@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Shop from "./pages/shop/Shop.js";
 import Cart from "./pages/cart/Cart.js";
 import Nav from "./components/Nav.js"
@@ -6,11 +6,14 @@ import WohmenDress from './pages/wohmenDress/wohmenDress.js'
 import KidDress from "./pages/kidDress/kidDress.js";
 import Error from "./components/Error.js"
 import Login from "./login/login.js";
+import { ShopContextProvider } from "./context/shopContext.js";
 
 
 function App() {
+
   return (
     <>
+    <ShopContextProvider>
     <Router>
      <Nav />
       <Routes>
@@ -27,7 +30,7 @@ function App() {
         <Route  path="*" element ={< Error/>}></Route>
       </Routes>
     </Router>
-   
+    </ShopContextProvider>
     </>
   );
 }
