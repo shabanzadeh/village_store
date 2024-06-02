@@ -7,18 +7,17 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const navitage = useNavigate();
-  navitage("/")
+  const navigate = useNavigate();
 
-  const handleLogin = (e:any) => {
+  const handleLogin = (e: any) => {
     e.preventDefault();
-    setError(false); 
+    setError(false);
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log("User logged in: ", user);
-        
+        navigate("/"); // Navigate only after successful login
       })
       .catch((error) => {
         setError(true);

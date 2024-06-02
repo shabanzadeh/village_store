@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import {ItemProps, ShopContextProps} from '../../types/types'
 import { ShopContext } from '../../context/shopContext';
-import { count } from 'firebase/firestore';
+
 
 
 
