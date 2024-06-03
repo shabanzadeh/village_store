@@ -25,7 +25,7 @@ export const PRODUCTSWOHMEN = [
   },
   {
     id: 4,
-    productName: "Cotton T-shirt",
+    productName: "Top T-shirt",
     price: 10000,
     productImage: top
   }

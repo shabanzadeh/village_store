@@ -15,6 +15,7 @@ import { ShopContextProvider } from "./context/shopContext.js";
 import { AuthContext, AuthContextProvider } from "./context/authContext.js";
 import { useContext } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
+import Contact from "./components/Contact.tsx";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -66,6 +67,7 @@ function App() {
               />
 
               <Route path="/login" element={<Login />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </ErrorBoundary>
