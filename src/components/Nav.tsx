@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../context/shopContext';
+import CarouselShop from './Carousel';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,7 @@ const Nav = () => {
     <nav className="bg-white shadow-md">
       <div className="container mx-auto flex items-center justify-between py-2">
         <div className="flex items-center justify-between w-full">
+        
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
             <Link to="/" className="text-gray-700">Home</Link>
             <Link to="/cart" className="text-gray-700">Cart
@@ -24,9 +26,7 @@ const Nav = () => {
             <Link to="/contact" className="text-gray-700">Contact</Link>
           </div>
           <div className="text-center flex-grow">
-            <div className="text-center h-20 pt-6  text-gray-800 text-xl font-semibold">
-              Village Store
-            </div>
+            
           </div>
           <div className="block lg:hidden">
             <button
@@ -55,6 +55,7 @@ const Nav = () => {
             <Link to="/contact" className="block mt-4 text-gray-700">Contact</Link>
           </div>
         </div>
+        < CarouselShop  />
       </div>
     </nav>
   );

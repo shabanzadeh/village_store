@@ -17,11 +17,13 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@types/react-router-dom": "^5.3.3",
+    "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
     "firebase": "^10.12.1",
     "font-awesome-icons": "^1.6.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.0",
     "react-whatsapp": "^0.3.0"

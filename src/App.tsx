@@ -18,6 +18,7 @@ import { AuthContext, AuthContextProvider } from "./context/authContext.js";
 import { useContext } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Contact from "./components/Contact.tsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const { currentUser } = useContext(AuthContext);

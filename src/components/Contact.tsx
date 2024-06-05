@@ -6,26 +6,24 @@ const Contact = () => {
   const message = 'Whatsapp Inquiry';
 
   return (
-   
-
-    <div className="flex-auto h-screen text-center box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500  text-white ...">
-      <div>
+    <div className='overflow-hidden flex items-center justify-center'>
+      <div className="text-center text-white max-w-md mx-auto p-4">
         <h2 className='text-2xl p-10'>CONTACT WITH US</h2>
-      </div>
-      <div className="text-center mt-10">
-      <a href={`tel:${phoneNumber}`} className='cart-text mb-2 text-blue-500 ' style={{color: 'white', backgroundColor: 'gray'}} >
-         tel: {phoneNumber}
-      </a>
-      </div>
-      <div>
-      <ReactWhatsapp
-        number={phoneNumber}
-        message={message}
-        className="whatsapp-button mt-4"
-        style={{ color: 'white', backgroundColor: '#075E54' }}
-      >
-        Contact us via WhatsApp
-      </ReactWhatsapp>
+        <div className="mt-10">
+          <a href={`tel:${phoneNumber}`} className='inline-block mb-4 p-4 rounded bg-gray-700' style={{ color: 'white' }}>
+            tel: {phoneNumber}
+          </a>
+        </div>
+        <div>
+          <ReactWhatsapp
+            number={phoneNumber}
+            message={message}
+            className="inline-block mt-4 p-4 rounded"
+            style={{ color: 'white', backgroundColor: '#075E54' }}
+          >
+            Contact us via WhatsApp
+          </ReactWhatsapp>
+        </div>
       </div>
     </div>
   );

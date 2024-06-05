@@ -12,7 +12,7 @@ const ProductAll = (props: ItemProps) => {
   
 
   return (
-    <div className="gap-4 p-4 bg-white rounded-lg shadow-md">
+    <div className="gap-4 p-4 bg-white rounded-lg shadow-md overflow-hidden">
       <img
         src={productImage}
         alt={productName}
