@@ -24,7 +24,7 @@ const Nav = () => {
             <Link to="/contact" className="text-gray-700">Contact</Link>
           </div>
           <div className="text-center flex-grow">
-            <div className="text-center h-20 pt-6 text-gray-800 text-xl font-semibold">
+            <div className="text-center h-20 pt-6  text-gray-800 text-xl font-semibold">
               Village Store
             </div>
           </div>

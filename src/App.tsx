@@ -9,6 +9,7 @@ import Cart from "./pages/cart/Cart.js";
 import Nav from "./components/Nav.js";
 import WohmenDress from "./pages/wohmenDress/wohmenDress.js";
 import KidDress from "./pages/kidDress/kidDress.js";
+import Kitchen from "./pages/kitchen/kitchen.tsx";
 import Error from "./components/Error.js";
 import Login from "./login/login.js";
 import { ShopContextProvider } from "./context/shopContext.js";
@@ -65,6 +66,7 @@ function App() {
                   </RequireAuth>
                 }
               />
+              <Route path="/kitchen" element={<Kitchen />}/>
 
               <Route path="/login" element={<Login />} />
               <Route path="/contact" element={<Contact />} />

@@ -5,7 +5,7 @@ import { ShopContext } from '../../context/shopContext';
 
 
 
-const ProductW = (props: ItemProps) => {
+const ProductAll = (props: ItemProps) => {
   const { id, productImage, productName, price } = props.data;
   const {cartItems, addToCart, removeFromCart } = useContext<ShopContextProps | null>(ShopContext);
   const isThere = cartItems.some((item: number)=>item.id ===id)
@@ -34,4 +34,4 @@ const ProductW = (props: ItemProps) => {
   );
 };
 
-export default ProductW;
+export default ProductAll;

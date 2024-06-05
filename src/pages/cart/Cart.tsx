@@ -1,8 +1,9 @@
 import { useContext } from 'react';
-import { PRODUCTSWOHMEN } from '../../data/productsWohmen';
 import { ShopContext } from '../../context/shopContext';
-import ProductW from '../../pages/shop/productWohmen';
-import { ShopContextProps, CartItem } from '../../types/types';
+import { PORODUCTSKITCHEN } from '../../data/productkitchen';
+import { PRODUCTSWOHMEN } from '../../data/productsWohmen';
+import { ItemProps, ShopContextProps } from '../../types/types';
+import ProductAll from '../shop/productAll';
 
 const Cart: React.FC = () => {
   const context = useContext<ShopContextProps | null>(ShopContext);
@@ -19,12 +20,21 @@ const Cart: React.FC = () => {
         {PRODUCTSWOHMEN.map((p) => {
           if (
             cartItems.some(
-              (i: CartItem) => i && i.id === p.id && i.count > 0
+              (i: ItemProps) => i && i.id === p.id && i.count > 0
             )
           ) {
-            return <ProductW key={p.id} data={p} />;
+            return <ProductAll key={p.id} data={p} />;
           }
           return null;
+        })}
+        {PORODUCTSKITCHEN.map((p)=>{
+          if(
+            cartItems.some(
+              (i: ItemProps)=>i && i.id === p.id && i.count>0
+
+            )
+          )
+          return <ProductAll key={p.id } data = {p} />
         })}
       </div>
     </div>

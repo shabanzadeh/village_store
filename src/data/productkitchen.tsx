@@ -2,7 +2,7 @@ import gonsonicMixer from "../assets/gosonci_mixer.jpg"
 import bushMixer from "../assets/bush_mixer.jpg"
 import electronicMasher from "../assets/electronic masher.jpg"
 import speaker from "../assets/speaker.jpg"
-import stealKettle from "../assets/steal_kettle.jpg"
+import stealKettle from "../assets/steel_kettle.jpeg"
 
 export const PORODUCTSKITCHEN = [{
     id: 1,

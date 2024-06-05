@@ -6,25 +6,25 @@ import top from "../assets/Top.jpg"
 export const PRODUCTSWOHMEN = [
 
   {
-    id: 1,
+    id: 6,
     productName: "Jorden",
     price: 10000,
     productImage: wTshirtJordan
   },
   {
-    id: 2,
+    id: 7,
     productName: "T shirt girl",
     price: 10000,
     productImage: tshirtGirl
   },
   {
-    id: 3,
+    id: 8,
     productName: "Cotton T-shirt",
     price: 10000,
     productImage: cottonTshirt
   },
   {
-    id: 4,
+    id: 9,
     productName: "Top T-shirt",
     price: 10000,
     productImage: top

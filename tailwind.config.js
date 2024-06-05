@@ -3,10 +3,8 @@ module.exports = {
   darkMode: false, 
   theme: {
     extend: {
-      screens: {
-        'tablet': '640px',   // => @media (min-width: 640px) { ... }
-        'laptop': '1024px',   // => @media (min-width: 1024px) { ... }
-        'desktop': '1280px',  // => @media (min-width: 1280px) { ... }
+      colors: {
+        'custom-color': '#000000', // Ersetzen Sie #000000 durch Ihre gewünschte Farbe
       },
     },
   },
