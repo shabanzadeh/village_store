@@ -46,6 +46,10 @@ const Cart: React.FC = () => {
           )
           return <ProductAll key={p.id } data = {p} />
         })}
+
+        <div>
+      
+        </div>
       </div>
     </div>
   );

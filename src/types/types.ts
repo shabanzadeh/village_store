@@ -15,6 +15,8 @@ export type ShopContextProps={
     cartItems: ItemProps[],
     addToCart: (itemId: number) => void
     removeFromCart: (itemId: number) => void
+    sendWhatsAppMessage: (productName: string) => void
+
 }
 
 export type ShopContextProviderProps = {

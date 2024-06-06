@@ -6,6 +6,12 @@ export const ShopContext = createContext<ShopContextProps | null>(null);
 
 export const ShopContextProvider: React.FC<ShopContextProviderProps> = (props) => {
   const [cartItems, setCartsItems] = useState<ItemProps[]>([]);
+  const sendWhatsAppMessage = (productName: string) => {
+    const phone = '15901367047'; 
+    const msg = encodeURIComponent(`Hello, a user has selected the product: ${productName}`);
+    const href = `https://wa.me/${phone}/?text=${msg}`;
+    window.open(href, '_blank');
+  };
 
   const addToCart = (itemId: number) : any=> {
     if(!cartItems?.find((item) => item.id === itemId))
@@ -28,7 +34,7 @@ export const ShopContextProvider: React.FC<ShopContextProviderProps> = (props) =
     }));
   };
 
-  const contextValue: ShopContextProps = { cartItems, addToCart, removeFromCart };
+  const contextValue: ShopContextProps = { cartItems, addToCart, removeFromCart, sendWhatsAppMessage };
 
   return (
     <ShopContext.Provider value={contextValue}>

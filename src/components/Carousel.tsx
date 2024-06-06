@@ -8,7 +8,7 @@ const CarouselShop = () => {
       <Carousel id="carouselExampleIndicators">
        
         <Carousel.Item>
-          <div className="flex justify-center">
+          <div className="flex justify-center p-0 m-0">
             <img className="object-contain h-20 w-50" src={onlineShop} alt="Second slide" />
           </div>
     

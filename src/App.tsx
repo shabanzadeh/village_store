@@ -11,8 +11,10 @@ import WohmenDress from "./pages/wohmenDress/wohmenDress.js";
 import KidDress from "./pages/kidDress/kidDress.js";
 import Kitchen from "./pages/kitchen/kitchen.tsx";
 import Cosmetic from "./pages/cosmetic/Cosmetic.tsx";
+import Register from "./register/Register.tsx";
 import Error from "./components/Error.js";
 import Login from "./login/login.js";
+import MainComponent from "./components/MainComponent.tsx";
 import { ShopContextProvider } from "./context/shopContext.js";
 import { AuthContext, AuthContextProvider } from "./context/authContext.js";
 import { useContext } from "react";
@@ -42,6 +44,7 @@ function App() {
                   </RequireAuth>
                 }
               />
+             
               <Route
                 path="/wohmenDress"
                 element={
@@ -72,6 +75,7 @@ function App() {
               <Route path="/cosmetic" element={<Cosmetic />}/>
 
               <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
               <Route path="/contact" element={<Contact />} />
 
               <Route path="*" element={<Error />} />
