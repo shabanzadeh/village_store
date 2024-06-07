@@ -14,7 +14,6 @@ import Cosmetic from "./pages/cosmetic/Cosmetic.tsx";
 import Register from "./register/Register.tsx";
 import Error from "./components/Error.js";
 import Login from "./login/login.js";
-import MainComponent from "./components/MainComponent.tsx";
 import { ShopContextProvider } from "./context/shopContext.js";
 import { AuthContext, AuthContextProvider } from "./context/authContext.js";
 import { useContext } from "react";

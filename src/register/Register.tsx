@@ -1,9 +1,9 @@
-import {  doc, serverTimestamp, setDoc } from "firebase/firestore";
+import { Timestamp, addDoc, collection, doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { db, auth } from "../../api/firebase";
 import { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
-const New = () => {
+const Register = () => {
   const [data, setData] = useState({
     name: '',
     state: '',
@@ -20,6 +20,7 @@ const New = () => {
     e.preventDefault();
     try {
       const res = await createUserWithEmailAndPassword(auth, data.email, data.password);
+      await updateProfile(res.user, { displayName: data.name }); 
       await setDoc(doc(db, "users", res.user.uid), {
         name: data.name,
         state: data.state,
@@ -69,4 +70,4 @@ const New = () => {
   );
 };
 
-export default New;
+export default Register;

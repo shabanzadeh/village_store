@@ -8,7 +8,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { cartItems } = useContext(ShopContext);
   const { currentUser } = useContext(AuthContext);
-  const itemCount = cartItems.reduce((prev: any, current: { count: any; }) => prev + current.count, 0);
+  const itemCount = cartItems.reduce((prev, current) => prev + current.count, 0);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -29,13 +29,14 @@ const Nav = () => {
           <div className="flex items-center justify-end space-x-4 ml-auto">
             {currentUser ? (
               <>
-                <span className="text-gray-700">Welcome, {currentUser.displayName || currentUser.email}</span>
+                <span className="text-gray-700">Welcome, {currentUser.name || currentUser.email}</span>
                 <Link to="/login" className="text-gray-700">Login</Link>
                 <Link to="/register" className="text-gray-700">Register</Link>
               </>
             ) : (
               <>
-               
+                <Link to="/login" className="text-gray-700">Login</Link>
+                <Link to="/register" className="text-gray-700">Register</Link>
               </>
             )}
           </div>
@@ -65,13 +66,14 @@ const Nav = () => {
             </Link>
             {currentUser ? (
               <>
-                <span className="mt-4 text-gray-700">Welcome, {currentUser.displayName || currentUser.email}</span>
+                <span className="mt-4 text-gray-700">Welcome, {currentUser.name || currentUser.email}</span>
                 <Link to="/login" className="block mt-4 text-gray-700">Login</Link>
                 <Link to="/register" className="block mt-4 text-gray-700">Register</Link>
               </>
             ) : (
               <>
-                
+                <Link to="/login" className="block mt-4 text-gray-700">Login</Link>
+                <Link to="/register" className="block mt-4 text-gray-700">Register</Link>
               </>
             )}
           </div>
