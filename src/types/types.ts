@@ -29,3 +29,13 @@ export type ShopPropsInterface = {
     categoryImage: string;
     categoryLink: string;
   };
+
+  export type User = {
+    id: string;
+    name: string;
+    address: string;
+    county: string;
+    city: string;
+    password: string;
+    email: string;
+};
