@@ -8,7 +8,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { cartItems } = useContext(ShopContext);
   const { currentUser } = useContext(AuthContext);
-  const itemCount = cartItems.reduce((prev, current) => prev + current.count, 0);
+  const itemCount = cartItems.reduce((prev: any, current: { count: any; }) => prev + current.count, 0);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

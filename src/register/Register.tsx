@@ -1,4 +1,4 @@
-import { Timestamp, addDoc, collection, doc, serverTimestamp, setDoc } from "firebase/firestore";
+import {  doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { db, auth } from "../../api/firebase";
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
