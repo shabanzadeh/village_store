@@ -20,6 +20,7 @@ import { useContext } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Contact from "./components/Contact.tsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Logout from "./logout/Logout.tsx";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -76,6 +77,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/logout" element={<Logout />} />
 
               <Route path="*" element={<Error />} />
             </Routes>
