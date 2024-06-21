@@ -34,7 +34,11 @@ export const ShopContextProvider: React.FC<ShopContextProviderProps> = (props) =
     }));
   };
 
-  const contextValue: ShopContextProps = { cartItems, addToCart, removeFromCart, sendWhatsAppMessage };
+  const clearCart = () => {
+    setCartsItems([]);
+  };
+
+  const contextValue: ShopContextProps = { cartItems, addToCart, removeFromCart, sendWhatsAppMessage, clearCart };
 
   return (
     <ShopContext.Provider value={contextValue}>

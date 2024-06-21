@@ -1,17 +1,20 @@
-import { useContext, useState } from 'react';
+// components/Login.js
+import React, { useContext, useState } from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../api/firebase";
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/authContext';
+import { ShopContext } from '../context/shopContext';
 
-const Login = () => {
+const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const navigate = useNavigate();
   const { dispatch } = useContext(AuthContext);
+  const shopContext = useContext(ShopContext);
 
-  const handleLogin = (e) => {
+  const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     setError(false);
 
@@ -25,6 +28,9 @@ const Login = () => {
         };
         dispatch({ type: "LOGIN", payload: userData });
         localStorage.setItem("user", JSON.stringify(userData));
+        if (shopContext) {
+          shopContext.clearCart();  // Leert den Warenkorb beim Anmelden
+        }
         console.log("User logged in: ", userData);
         navigate("/");
       })

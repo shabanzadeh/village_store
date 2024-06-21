@@ -16,6 +16,9 @@ export type ShopContextProps = {
   addToCart: (itemId: number) => void;
   removeFromCart: (itemId: number) => void;
   sendWhatsAppMessage: (productName: string) => void;
+  clearCart: () => void;
+  
+
 };
 
 export type ShopContextProviderProps = {
@@ -26,6 +29,7 @@ export type ShopPropsInterface = {
   categoryName: string;
   categoryImage: string;
   categoryLink: string;
+  
 };
 
 export type User = {
